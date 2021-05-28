@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{xcolor}
+%esiste funzione per rinominare funzioni, in modo da poterle scrivere più velocemente nel testo
+%nb. cosi facendo, io posso poi togliere tutto ciò che è rosso inserendo "%" davati a mia finzione rinominata
+%https://www.overleaf.com/learn/latex/Commands
+\newcommand{\rosso}{\textcolor{red}}
+%riscordfa che con hyperref è possibile materializzare i richiami nel testo, rendendoli interattivi
+
+\title{Formule}
+\author{Tommaso Leone Bondi }
+\date{May 2021}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+In questo latex inposteremo formule mediante la compilazione automatica
+%per mettere in grassetto funz
+\textbf{fhdbsnabsvfsnffADS}NADSNJCNJCSAJNCAN
+%per mettere in corsivo funz 
+\textit{gvdcbhasnxmkcsndbsvdcasn}CSNNJCASNJCS
+%ovviamente poi è sembre comodo rinominarla come visto per coloro in modo da semplificarne la gestione poi
+\end{abstract}
+
+\section{Introduction}
+%inserire equazioni in testo, son singole
+%mediante il simbolo $$ inserisco formule in un testo, scrivendola tra i due simboli
+section with number, come vedremo inserirò formule all'interno del documento latex, formule quali $\sum$ e altre
+\section*{chap 1}
+section no numbe
+%per le cit, per richiamarle si utilizza cite, vedi il richiamo alla bibliografia
+sto inserendo la cit di bus, avendo inserito \citep{brus et al.} sarà davvero veloce compilare bibliografia
+\subsection{sub 1}
+subsection number
+%https://it.overleaf.com/learn/latex/Using_colours_in_LaTeX
+cambiamo ora colore del testo con funzione textcolor
+%i colori sono bastati sul pacchetto xcolor, testo colorota va binserito tra la seconda parentesi, il colore è nella prima
+\textcolor{red}{jndfwbkyuafnSM,LMFNUBEHLQRWIJ} kmadda \rosso{njbhcnadbda}
+%nb. sono entrambe colorate con textcolor ma ora comando è rinominato
+\subsection*{sub 2}
+sunbsec no number \citep{Adorno 1960} ( caso cit sbagliata)jhjdfsa
+\section{formula}
+%come scrivere formule, funzione ovviamemte si apre con begin
+%https://en.wikibooks.org/wiki/LaTeX/Mathematics -> per vedere come si scrivono formule
+\begin{equation}
+%times è funzione per moltiplicazione, sum per somma, log per logaritmo
+%per mettere il pedice nella formula devo usare underscore, associato a lettere a cui va associato  il pedice
+H= - \sum  p_i \times  \log{p_{ijm}}
+\label{equation}
+%si provi ora a scrivere sommatoria con sommatoria da ... a...
+%apice si inserisce con ^ associato a lettera/parola a cui si riferisce
+\end{equation}
+\begin{equation}
+  \sum_{i=1}^{k} 
+  \label{eqaution 2}
+\end{equation}
+\section{discussione}
+%io scrivo un equazione, che menzionerò successivamente, ad esempio quella in riga 29, come si vede in riga trenta metto lable a equazione
+come abbiamo visto nella sezione formula
+\ref{equation}
+
+%per richiamare inserisco ref, tra graffa nome che ho assegnato in lable a cio che voglio richiamare
+come abbiamo visto in sezione formula, nella formula due \ref{eqaution 2}, si può inserire ref in mezzo a testo per richiamare
+\section{chap 2}
+%pacchetto natbib
+inseriamo ora delle citazioni, inserendo delle citazioni va preparata però anche la bibliografia, si effettua con un begin end
+
+\section{itemize}
+%inserire item
+\begin{itemize}
+    \item knrgenjfn
+\end{itemize}
+
+%inserire elenco numerato
+\begin{enumerate}
+    \item vhvgvgvg
+\end{enumerate}
+\begin{thebibliography}{999}
+%il numero segnato affianco è il numero massimo di citazioni che inseriremo
+%tra graffe s inserisce oggetto tra quadre la carastteristica dell oggetto
+
+\bibitem[brus et. 1993]{brus et al.}
+D J Brus, J J De Gruijter
+Design-based versus model-based estimates of spatial means: Theory and application in environmental soil science
+Environmetrics, 4 (1993), pp. 123-152
+
+\bibitem[Adorno 1960]{Adorno, T.W.}
+Adorno, T.W. (1960) ‘The meaning of working through the past’ in Adorno, T.W. Guilt and Defense: On the legacies of National Socialism in postwar Germany (translated and edited by Olick, J.K. and Perrin, A.J., 2010). Cambridge, MA: Harvard University Press, pp. 213–27.
+
+\end{thebibliography}
+\end{document}
