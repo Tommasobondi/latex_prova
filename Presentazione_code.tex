@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usepackage{listings}
+%NB parentesei graffe infdicano argomento di funzione
+%NB parentesi quadre informazioni strutturali
+\usetheme{Warsaw} %tema da utilizzare, ne puoi scegliere vari, vedi modelli su overlef
+\usecolortheme{dove} %colore dominante di presentazione
+%per settare effetti grafici e forme finestre ad esempio
+\setbeamertemplate{blocks}[rounded][shadow=true]
+%qua come in file paper, titolo ecc ecc
+%inizio effettivo documento è solo dopo il titolo
+\title{PRESENTAZIONE DI PROVA}
+\subtitle{inserisco un sottotitolo}
+
+\author{Tommaso Leone Bondi}
+%https://it.overleaf.com/learn/latex/Inserting_Images
+\institute{UniBo-Alma Mater Studiorum\\
+\bigskip %con questa funzione stetto spazio immagine e testo relativo
+%iserire immagine, prima va caricata su overleaf da pc
+% "\\" affianco di posizione immagine la fissa li, parentsi romane aperta e poi va chiusa post funzione includegraphichs, vedi linee da institute a line 19 (})
+%nb. width con rapposto setto grandezza immagine in rapporto al testo
+\includegraphics[width=0.6\textwidth]{logounibo.png}
+}
+\begin{document}
+%dobbiamo quindi inserire dtitolo dettato prima, quindi funz maketitle
+\maketitle
+%creare sezioni in presentazione, con indicazione di sezione in cui si è, giochino di titoli sfocati e titoli in evidenz aquando skippi slide
+\section{intro}
+%slide la nomino frame, facendo begin frame creo slide
+%bisogna ovviamente anche settare testo
+%https://it.overleaf.com/learn/latex/Font_sizes,_families,_and_styles
+\begin{frame}{prima slide di intro}
+\Huge provo ora con testo di grandi dimensioni
+\tiny carattere più piccolo 
+%NB per cambiare dimesione del testo imposto dimensione prima di testo a cui voglio assegnare la stessa
+\end{frame}
+\begin{frame}{seconda slide di intro}
+ adsjbjadfbjkdfbjcd 
+ 
+\end{frame}
+
+ %apro ora nuova sezione, con relative slide
+ \section{sezone centrale}
+ \begin{frame}{inserimento formula} %vedi file tex precedente
+ %https://www.youmath.it/come-scrivo-le-formule-matematiche.html anche per simboli
+ \begin{equation}
+ \sigma_{x}= \sqrt{\frac{\sum_{i=1}^{N}({x_{i}+\mu})^{2}}{N}} 
+  %per inserire radici cubiche etc etc porre [] post \sqrt
+ \end{equation}
+ \end{frame}
+ \begin{frame}{inserimento formula prova 2}
+ \begin{equation}
+ CV_{a.caso}=\frac {\sqrt{\frac{\sum_{i=1}^{N}({x_{i}+\mu})^{2}}{N}}}{\frac{\mu{x}}{\sqrt{\beta}\gamma}} 
+  %per inserire radici cubiche etc etc porre [] post \sqrt
+ \end{equation}
+ \end{frame}
+
+\end{document}
