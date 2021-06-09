@@ -1,0 +1,132 @@
+%nb, a volte ti dara overful box, quando si chiude con end una slide, devi sempre stare attento al fatto che ci stia tutto
+\documentclass{beamer}
+\usepackage{listings} %(buono per articoli e slide, è pacchetto, non conta il formato)
+%NB parentesei graffe infdicano argomento di funzione
+%NB parentesi quadre informazioni strutturali
+\usetheme{Goettingen} %tema da utilizzare, ne puoi scegliere vari, vedi modelli su overlef
+%https://deic-web.uab.cat/~iblanes/beamer_gallery/index_by_color.html
+\usecolortheme{dove} %colore dominante di presentazione
+%per settare effetti grafici e forme finestre ad esempio
+\setbeamertemplate{blocks}[rounded][shadow=true]
+%qua come in file paper, titolo ecc ecc
+%inizio effettivo documento è solo dopo il titolo
+\title{PRESENTAZIONE DI PROVA}
+\subtitle{inserisco un sottotitolo}
+
+\author{Tommaso Leone Bondi}
+%https://it.overleaf.com/learn/latex/Inserting_Images
+\institute{UniBo-Alma Mater Studiorum\\
+\bigskip %con questa funzione stetto spazio immagine e testo relativo
+%iserire immagine, prima va caricata su overleaf da pc
+% "\\" affianco di posizione immagine la fissa li, parentsi romane aperta e poi va chiusa post funzione includegraphichs, vedi linee da institute a line 19 (})
+%nb. width con rapposto setto grandezza immagine in rapporto al testo
+\includegraphics[width=0.6\textwidth]{logounibo.png}
+}
+\begin{document}
+%dobbiamo quindi inserire dtitolo dettato prima, quindi funz maketitle
+\maketitle
+%creare sezioni in presentazione, con indicazione di sezione in cui si è, giochino di titoli sfocati e titoli in evidenz aquando skippi slide
+%da qua a section vedi github
+\AtBeginSection[] % Do nothing for \section*
+{   
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[currentsection,currentsubsection,currentsubsubsection]
+\end{frame}
+}
+\section{intro}
+%slide la nomino frame, facendo begin frame creo slide
+%bisogna ovviamente anche settare testo
+%https://it.overleaf.com/learn/latex/Font_sizes,_families,_and_styles
+\begin{frame}{prima slide di intro}
+\Huge provo ora con testo di grandi dimensioni
+\tiny carattere più piccolo 
+%NB per cambiare dimesione del testo imposto dimensione prima di testo a cui voglio assegnare la stessa
+\end{frame}
+\begin{frame}{seconda slide di intro}
+ adsjbjadfbjkdfbjcd 
+ 
+\end{frame}
+
+ %apro ora nuova sezione, con relative slide
+ \section{sezone centrale}
+ \subsection{formula 1}
+ \begin{frame}{inserimento formula} %vedi file tex precedente
+ %https://www.youmath.it/come-scrivo-le-formule-matematiche.html anche per simboli
+ \begin{equation}
+ \sigma_{x}= \sqrt{\frac{\sum_{i=1}^{N}({x_{i}+\mu})^{2}}{N}} 
+  %per inserire radici cubiche etc etc porre [] post \sqrt
+ \end{equation}
+ \end{frame}
+ \subsection{formula 2}
+ \begin{frame}{inserimento formula prova 2}
+ \begin{equation}
+ CV_{a.caso}=\frac {\sqrt{\frac{\sum_{i=1}^{N}({x_{i}+\mu})^{2}}{N}}}{\frac{\mu{x}}{\sqrt{\beta}\gamma}} 
+  %per inserire radici cubiche etc etc porre [] post \sqrt
+ \end{equation}
+ \end{frame}
+ \section{lezione 09/06}
+\begin{frame}
+\frametitle{itemaizing}
+\begin{itemize}
+%inserire elenco puntato con funz itemize
+    \item first item
+    \item second item
+\end{itemize}
+%inserire elenco puntato
+%visulaizzare item in singola slide, copio slide e inserisco fra apici, accanto a funzione item tra apici dei numeri, 1, 2, 3...
+\end{frame}
+
+%inserire elenco puntato
+%visulaizzare item in singola slide, copio slide e inserisco fra apici, accanto a funzione item tra apici dei numeri, 1, 2, 3...
+\begin{frame}
+ \frametitle{Itemizing}
+ \begin{itemize}
+  \item<1-> Remote sensing is a powerful tool
+  \item<2-> It can be used for diversity estimate
+  \item<3-> It can be used in ecological informatics
+  %nb. i punti si "aggiungono" man mano che le slide degli item vengono crate
+ \end{itemize}
+\end{frame}
+
+%come inserire codice, all'interno di latec si utilizzano librerie(siveda prime righe)(pacchetto listing, riga 2)
+\section{inserire codice}
+\begin{frame}
+\frametitle{My code}
+%stai in occhio che codice ci stia tutto, puoi modificarlo come testo con tiny, huge etc etc
+%https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\tiny
+     \lstinputlisting[language=R]{code.r}
+\end{frame}
+%da github prendere codice che serve, salvarlo su editor di testo e slavarlo sul pc,, lo craico come carico immgine (freccia "carica")
+
+%caricare ora immgaine
+%funz centering in impqagina immagine in slide
+\section{insert immagine}
+\begin{frame}
+\frametitle{include graphics}
+\centering
+\includegraphics[width=0.6\textwidth]{a.png}
+%per inserire testo devo andare a capo-> \\ con due back slash si va a capo
+\\
+\bigskip %o small schip, dipende a quanto spazio voglio lascire
+questa immgie è stata crata con r
+
+%come iserire immagini alinterno di slide
+%stai sempre attento a dimensione immagine, ci deve entrare, e puoi farle di dimesioni diverse
+\end{frame}
+\begin{frame}
+\frametitle{include graphics}
+\centering
+\includegraphics[width=0.3\textwidth]{a.png}
+\includegraphics[width=0.4\textwidth]{a.png}
+%per inserirne 4 devo andare a capo e mricomplare qindi con funz usate in precedenza
+\\
+\includegraphics[width=0.1\textwidth]{a.png}
+\includegraphics[width=0.2\textwidth]{a.png}
+    
+\end{frame}   
+ 
+
+ 
+\end{document}
